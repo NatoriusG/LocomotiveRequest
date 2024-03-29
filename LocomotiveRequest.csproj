@@ -10,7 +10,16 @@
     <Reference Include="Assembly-CSharp" />
     <Reference Include="UnityEngine" />
     <Reference Include="UnityEngine.CoreModule" />
-    <Reference Include="UnityModManager" Version="0.27.11" />
+    <Reference Include="UnityModManager" />
+    <Reference Include="0Harmony" />
+    <Reference Include="DV.ThingTypes" />
+    <Reference Include="DV.Utils" />
+    <Reference Include="DVModAPI" />
+    <Reference Include="CareerManagerAPI" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="pwsh .\debug.ps1" />
+  </Target>
 
 </Project>
