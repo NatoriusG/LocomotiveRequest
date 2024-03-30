@@ -1,5 +1,8 @@
-$BuildOutput = '.\obj\Debug\net48\LocomotiveRequest.dll'
-$InfoJSON = '.\info.json'
-$GameModPath = 'M:\Games\Steam\steamapps\common\Derail Valley\Mods\LocomotiveRequest\'
+$BuildOutput = './obj/Debug/net48/LocomotiveRequest.dll'
+$InfoJSON = './info.json'
+$LocalEnv = Get-Content -Path './.env.json' | ConvertFrom-Json
 
-Copy-Item -Path @($BuildOutput, $InfoJSON) -Destination $GameModPath -Force
+$GameModPath = $LocalEnv.gamePath + 'Mods/LocomotiveRequest/'
+
+$null = New-Item -Path $GameModPath -ItemType Directory -Force
+Copy-Item -Path @($BuildOutput, $InfoJSON) -Destination $GameModPath
