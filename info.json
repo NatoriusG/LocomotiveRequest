@@ -1,0 +1,8 @@
+{
+  "Id": "LocomotiveRequest",
+  "DisplayName": "LocomotiveRequest",
+  "Author": "Natorius",
+  "Version": "0.1.0",
+  "AssemblyName": "LocomotiveRequest.dll",
+  "EntryMethod": "LocomotiveRequest.Entry.Load"
+}

@@ -15,11 +15,11 @@
     <Reference Include="DV.ThingTypes" />
     <Reference Include="DV.Utils" />
     <Reference Include="DVModAPI" />
-    <Reference Include="CareerManagerAPI" />
+    <Reference Include="CommsRadioAPI" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="pwsh .\debug.ps1" />
+    <Exec Command="pwsh -noprofile .\debug.ps1" />
   </Target>
 
 </Project>
