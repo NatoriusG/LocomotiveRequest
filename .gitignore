@@ -4,3 +4,5 @@ bin/
 obj/
 Directory.Build.targets
 .env.json
+package/
+release.7z

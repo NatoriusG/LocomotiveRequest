@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="pwsh -noprofile .\debug.ps1" />
+    <Exec Condition="'$(Configuration)'=='Debug'" Command="pwsh -noprofile ./debug.ps1" />
   </Target>
 
 </Project>
